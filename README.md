@@ -1,6 +1,6 @@
 # Methodly
 
-Methodly will test your knowledge of string and math methods. Be careful not to get three answers wrong Otherwise, Socrates dies and you must restart. 
+Methodly will test your knowledge of string and math methods. Be careful not to get three answers wrong. Otherwise, Socrates dies and you must restart. 
 
 # Installation
 
