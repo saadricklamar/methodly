@@ -1,0 +1,81 @@
+@import './variables.scss';
+
+.welcome {
+  background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(./images/Ancient.jpg) no-repeat center center fixed;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+ font-weight: 400;
+ color: white;
+}
+
+
+.right-answer,
+.wrong-answer {
+  position: absolute;
+  top: 200px;
+  display: none;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: $primary-font;
+  margin: 0;
+}
+
+.card {
+  height: 200px;
+  width: 400px;
+  margin-top: 5px;
+  border: 1px solid $primary-color;
+  border-radius: 5px;
+  background-color: $primary-background-color;
+  .question {
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    padding-top: 40px;
+  }
+}
+
+
+#answer-submit,
+#restart {
+  width: 200px;
+  height: 34px;
+  margin-top: 30px;
+  border-radius: 5px;
+  background-color: $primary-background-color;
+  font-family: $primary-font;
+  font-weight: bold;
+  font-size: 20px;
+  color: $primary-color;
+  cursor: $primary-pointer;
+  &:hover {
+    background-color: $primary-hover-color;
+  }
+}
+
+#answer-input {
+  width: 200px;
+  height: 30px;
+  margin-top: 50px;
+  border-radius: 5px;
+}
+
+#OneX,
+#TwoX,
+#ThreeX {
+    position: relative;
+    right: 15px;
+    color: red;
+    font-size: 50px;
+    display: none;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
