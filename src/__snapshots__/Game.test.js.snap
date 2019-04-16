@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Game Should match the snapshot 1`] = `
+<div
+  className="welcome"
+>
+  <p
+    class="right-answer"
+  >
+    Correct Answer!
+  </p>
+  <p
+    class="wrong-answer"
+  >
+    Wrong Answer!
+  </p>
+  <article
+    class="card"
+  >
+    <h2
+      class="question"
+    >
+      Returns the character at the specified index (position)
+    </h2>
+  </article>
+  <input
+    id="answer-input"
+    onChange={[Function]}
+    placeholder="Enter Answer Here"
+    type="text"
+  />
+  <input
+    id="answer-submit"
+    onClick={[Function]}
+    type="Submit"
+  />
+  <input
+    id="restart"
+    onClick={[Function]}
+    type="Submit"
+    value="Restart"
+  />
+  <section
+    class="wrong"
+  >
+    <i
+      class="fas fa-times"
+      id="OneX"
+    />
+    <i
+      class="fas fa-times"
+      id="TwoX"
+    />
+    <i
+      class="fas fa-times"
+      id="ThreeX"
+    />
+  </section>
+</div>
+`;

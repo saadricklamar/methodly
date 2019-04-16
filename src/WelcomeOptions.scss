@@ -1,0 +1,51 @@
+@import './variables.scss';
+
+.welcome {
+  background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(./images/Ancient.jpg) no-repeat center center fixed;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+ font-weight: 400;
+ color: $primary-color;
+}
+
+.welcome-header {
+  position: relative;
+  bottom: 300px;
+  right: 200px;
+  font-family: $primary-font;
+}
+
+h3 {
+  font-family: $primary-font;
+  font-size: 50px;
+  margin-top: 0;
+}
+
+.choices {
+  display: flex;
+  justify-content: space-between;
+  input {
+    width: 200px;
+    height: 100px;
+    background-color: $primary-background-color;
+    border-radius: 5px;
+    margin: 20px;
+    cursor: $primary-pointer;
+    font-family: $primary-font;
+    font-size: 30px;
+    color: $primary-color;
+    &:hover {
+      background-color: $primary-hover-color;
+    }
+  }
+}
+
+
+
