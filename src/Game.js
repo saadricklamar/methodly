@@ -11,7 +11,7 @@ class Game extends Component {
       currentCard: 0,
       currentQuestion: '',
       wrongCounter: 0,
-      incorrectQuestions: [],
+      incorrectQuestions: []
     }
 
   }
@@ -94,6 +94,7 @@ class Game extends Component {
   } 
 
   render() { 
+    console.log(this.state.currentCard)
     let question;
       if (this.state.currentCard === 0) {
          question = this.props.stringMethodQuestions[0] || this.props.mathMethodQuestions[0];
@@ -104,24 +105,25 @@ class Game extends Component {
         document.querySelector('#answer-submit').disabled = true;
         question = `Oh no! You killed Socrates. You need more practice. Please click the restart button.`
       }
-      // if(this.state.incorrectQuestions.length) {
-      //   question = this.state.incorrectQuestions[0]
-      // }
+      if(this.state.currentCard === 10 && this.state.answer === '' || this.state.currentCard === 25 && this.state.answer === '') {
+        document.querySelector('#answer-submit').disabled = true;
+        question = 'Congrats on not killing Socrates! You are a master of these methods. Click restart to try another.'
+      }
     return(
       <div className='welcome'>
-      <p class='right-answer'>Correct Answer!</p>
-      <p class='wrong-answer'>Wrong Answer!</p>
-        <article class='card'>
-           <h2 class='question'>{question}</h2> 
-        </article>
+        <p className='right-answer'>Correct Answer!</p>
+        <p class='wrong-answer'>Wrong Answer!</p>
+          <article className='card'>
+            <h2 className='question'>{question}</h2> 
+          </article>
           <input type='text' id='answer-input' placeholder='Enter Answer Here' onChange={this.handleChange}/>
           <input type='Submit' id='answer-submit' onClick={this.matchAnswer}/> 
           <input type='Submit' id='restart' value='Restart' onClick={this.gameOver}/> 
-        <section class='wrong'>
-          <i class='fas fa-times' id='OneX'></i>
-          <i class='fas fa-times' id='TwoX'></i>
-          <i class='fas fa-times' id='ThreeX'></i>
-        </section>
+          <section className='wrong'>
+            <i className='fas fa-times' id='OneX'></i>
+            <i className='fas fa-times' id='TwoX'></i>
+            <i className='fas fa-times' id='ThreeX'></i>
+          </section>
       </div>
       )
   }

@@ -67,11 +67,4 @@ describe('App', () => {
   //   expect(wrapper.state('stringMethodQuestions')).toEqual({mockStringQuestions})
   // });
   
-  // it('Should on clicking string methods populate the stringMethodQuestions and stringMethodAnswers arrays', () => {
-  //   let stringSpy = jest.spyOn(wrapper.instance(), 'gamePath');
-  //   wrapper.instance().gamePath();
-  //   expect(stringSpy).toHaveBeenCalled();
-  //   expect(wrapper.state()).toEqual
-
-  // });
 });
