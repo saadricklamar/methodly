@@ -28,9 +28,6 @@ class WelcomeOptions extends Component {
 
   }
 
-
-
-
 }
 
 
