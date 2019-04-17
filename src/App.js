@@ -17,7 +17,6 @@ class App extends Component {
       mathMethodQuestions: [],
       mathMethodAnswers: []
     }
-
   }
 
   componentWillMount() {
@@ -34,18 +33,17 @@ class App extends Component {
 
   gamePath = () => {
     if(this.state.selectedPath === 'String Methods') {
-    let stringQuestions = this.state.dataSet.filter(method => method.type === 'string').map(stringMethod => stringMethod.description)
-    let stringAnswers = this.state.dataSet.filter(method => method.type === 'string').map(stringMethod => stringMethod.name)
-    this.setState({stringMethodQuestions: stringQuestions, stringMethodAnswers: stringAnswers});
+      let stringQuestions = this.state.dataSet.filter(method => method.type === 'string').map(stringMethod => stringMethod.description)
+      let stringAnswers = this.state.dataSet.filter(method => method.type === 'string').map(stringMethod => stringMethod.name)
+      this.setState({stringMethodQuestions: stringQuestions, stringMethodAnswers: stringAnswers});
     } else {
       let mathQuestions = this.state.dataSet.filter(method => method.type === 'math').map(mathMethod => mathMethod.description);
       let mathAnswers= this.state.dataSet.filter(method => method.type === 'math').map(mathMethod => mathMethod.name);
-    this.setState({mathMethodQuestions: mathQuestions, mathMethodAnswers: mathAnswers});
+      this.setState({mathMethodQuestions: mathQuestions, mathMethodAnswers: mathAnswers});
     }
   }
 
   
-
   render() {
     let page;
     if(this.state.showWelcomeScreen) {
