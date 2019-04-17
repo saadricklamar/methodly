@@ -105,7 +105,7 @@ class Game extends Component {
         document.querySelector('#answer-submit').disabled = true;
         question = `Oh no! You killed Socrates. You need more practice. Please click the restart button.`
       }
-      if(this.state.currentCard === 10 && this.state.answer === '' || this.state.currentCard === 25 && this.state.answer === '') {
+      if(this.state.currentCard === 10 && !this.props.stringMethodQuestions.length || this.state.currentCard === 25 && !this.props.mathMethodQuestions.length) {
         document.querySelector('#answer-submit').disabled = true;
         question = 'Congrats on not killing Socrates! You are a master of these methods. Click restart to try another.'
       }
