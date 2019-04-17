@@ -35,6 +35,12 @@ exports[`Game Should match the snapshot 1`] = `
     type="Submit"
   />
   <input
+    id="wrong-questions"
+    onClick={[Function]}
+    type="Submit"
+    value="Study Wrong Questions"
+  />
+  <input
     id="restart"
     onClick={[Function]}
     type="Submit"
