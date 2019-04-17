@@ -18,6 +18,7 @@ describe('Game', () => {
                       mathMethodQuestions={mockMathQuestions}
                       mathMethodAnswers={mockMathAnswers} 
                       />)
+
   });
   it('Should match the snapshot', () => {
       expect(wrapper).toMatchSnapshot();
@@ -44,5 +45,13 @@ describe('Game', () => {
     expect(window.location.reload).toHaveBeenCalled();
     window.location.reload.mockRestore();
   });
+  //  it('Should setState of currentQuestion', () => {
+  //   const spyFunc = jest.fn();
+  //   Object.defineProperty(global.document, '.wrong-answer', { value: spyFunc });
+  //   expect(wrapper.state('currentQuestion')).toEqual('')
+  //   wrapper.instance().matchAnswer(spyFunc);
+  //   wrapper.setState({currentQuestion: mockStringQuestions.pop()})
+  //   expect(wrapper.state('currentQuestion')).toEqual(mockStringQuestions.pop())
+  // });
    
 });

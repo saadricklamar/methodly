@@ -1,21 +1,5 @@
 @import './variables.scss';
 
-.welcome {
-  background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(./images/Ancient.jpg) no-repeat center center fixed;
- -webkit-background-size: cover;
- -moz-background-size: cover;
- -o-background-size: cover;
- background-size: cover;
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- height: 100vh;
- font-weight: 400;
- color: white;
-}
-
-
 .right-answer,
 .wrong-answer {
   position: absolute;
@@ -40,7 +24,6 @@
     padding-top: 40px;
   }
 }
-
 
 #answer-submit,
 #restart,
