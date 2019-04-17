@@ -60,11 +60,29 @@ describe('App', () => {
   it('Should check if setTimeout has been called', () => {
     expect(setTimeout).toHaveBeenCalledTimes(3);
     });
-  // it('Should setState of stringMethodQuestions', () => {
-  //   expect(wrapper.state('stringMethodQuestions')).toEqual([])
-  //   wrapper.instance().gamePath();
-  //   wrapper.setState({stringMethodQuestions: mockStringQuestions})
-  //   expect(wrapper.state('stringMethodQuestions')).toEqual({mockStringQuestions})
-  // });
+  it('Should setState of stringMethodQuestions', () => {
+    expect(wrapper.state('stringMethodQuestions')).toEqual([])
+    wrapper.instance().gamePath();
+    wrapper.setState({stringMethodQuestions: mockStringQuestions})
+    expect(wrapper.state('stringMethodQuestions')).toEqual(mockStringQuestions)
+  });
+  it('Should setState of stringMethodAnswers', () => {
+    expect(wrapper.state('stringMethodAnswers')).toEqual([])
+    wrapper.instance().gamePath();
+    wrapper.setState({stringMethodAnswers: mockStringAnswers})
+    expect(wrapper.state('stringMethodAnswers')).toEqual(mockStringAnswers)
+  });
+  it('Should setState of mathMethodQuestions', () => {
+    expect(wrapper.state('mathMethodQuestions')).toEqual([])
+    wrapper.instance().gamePath();
+    wrapper.setState({mathMethodQuestions: mockMathQuestions})
+    expect(wrapper.state('mathMethodQuestions')).toEqual(mockMathQuestions)
+  });
+  it('Should setState of mathMethodAnswers', () => {
+    expect(wrapper.state('mathMethodAnswers')).toEqual([])
+    wrapper.instance().gamePath();
+    wrapper.setState({mathMethodAnswers: mockMathAnswers})
+    expect(wrapper.state('mathMethodAnswers')).toEqual(mockMathAnswers)
+  });
   
 });
