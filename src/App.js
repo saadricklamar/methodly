@@ -19,7 +19,7 @@ class App extends Component {
     }
   }
 
-  componentWillMount() {
+  componentDidMount() {
     fetch('https://fe-apps.herokuapp.com/api/v1/memoize/1901/saadricklamar/methods')
     .then(response => response.json())
     .then(data => {this.setState({ dataSet: data.methods});})
@@ -58,13 +58,6 @@ class App extends Component {
     }
     return(<div>{page}</div>)
   }
-
-
-
-
-
-
-
 
 
 }

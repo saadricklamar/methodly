@@ -83,18 +83,17 @@ class Game extends Component {
     window.location.reload();
   }
 
-   saveToStorage = () => {
-      let stringifiedCards = JSON.stringify(this.state.incorrectQuestions);
-      localStorage.setItem('saveToStudyLater', stringifiedCards);
+  saveToStorage = () => {
+    let stringifiedCards = JSON.stringify(this.state.incorrectQuestions);
+    localStorage.setItem('saveToStudyLater', stringifiedCards);
   }
   
-  studyIncorrectCards() {
-      let localStorageCards = JSON.parse(localStorage.getItem('saveToStudyLater'))
-      this.setState({currentQuestion: this.localStorageCards.pop()})
+  studyIncorrectCards = () => {
+    let localStorageCards = JSON.parse(localStorage.getItem('saveToStudyLater'))
+    this.setState({currentQuestion: localStorageCards.pop()})
   } 
 
   render() { 
-    console.log(this.state.currentCard)
     let question;
       if (this.state.currentCard === 0) {
          question = this.props.stringMethodQuestions[0] || this.props.mathMethodQuestions[0];
@@ -117,7 +116,8 @@ class Game extends Component {
             <h2 className='question'>{question}</h2> 
           </article>
           <input type='text' id='answer-input' placeholder='Enter Answer Here' onChange={this.handleChange}/>
-          <input type='Submit' id='answer-submit' onClick={this.matchAnswer}/> 
+          <input type='Submit' id='answer-submit' onClick={this.matchAnswer}/>
+          <input type='Submit' id='wrong-questions' value='Study Wrong Questions' onClick={this.studyIncorrectCards}/> 
           <input type='Submit' id='restart' value='Restart' onClick={this.gameOver}/> 
           <section className='wrong'>
             <i className='fas fa-times' id='OneX'></i>
